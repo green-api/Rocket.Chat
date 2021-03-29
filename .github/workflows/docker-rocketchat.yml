@@ -95,16 +95,6 @@ jobs:
       run: |
         meteor npm install
 
-    # To reduce memory need during actual build, build the packages solely first
-    # - name: Build a Meteor cache
-    #   run: |
-    #     # to do this we can clear the main files and it build the rest
-    #     echo "" > server/main.js
-    #     echo "" > client/main.js
-    #     sed -i.backup 's/rocketchat:livechat/#rocketchat:livechat/' .meteor/packages
-    #     meteor build --server-only --debug --directory /tmp/build-temp
-    #     git checkout -- server/main.js client/main.js .meteor/packages
-
     - name: Build Rocket.Chat
       run: |
         meteor build --server-only --directory /tmp/build-pr
@@ -113,10 +103,11 @@ jobs:
       run: |
         cd /tmp/build-pr
 
-
-        IMAGE_NAME="registry.gitlab.com/green-api/docker/rocket.chat:pr-${{ github.event.number }}"
+        IMAGE_NAME="registry.gitlab.com/green-api/docker/rocket.chat"
+        GIT_TAG="1.0.0"
 
         echo "Build official Docker image ${IMAGE_NAME}"
 
-        docker build -f $GITHUB_WORKSPACE/.docker/Dockerfile -t $IMAGE_NAME .
-        docker push $IMAGE_NAME
+        docker build -f $GITHUB_WORKSPACE/.docker/Dockerfile -t ${IMAGE_NAME}:$GIT_TAG .
+        docker push ${IMAGE_NAME}:$GIT_TAG
+        docker push ${IMAGE_NAME}:latest
