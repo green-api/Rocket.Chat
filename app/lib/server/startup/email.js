@@ -150,7 +150,7 @@ settings.addGroup('Email', function() {
 		//	code: 'text/html',
 		//	multiline: true,
 		//	i18nLabel: 'Footer',
-		//});
+		// });
 		this.add('Email_Footer_Direct_Reply', '<p class="advice">{Direct_Reply_Advice}</p>', {
 			type: 'code',
 			code: 'text/html',
