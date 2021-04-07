@@ -146,7 +146,7 @@ settings.addGroup('Email', function() {
 		});
 		// START GREEN API
 		// Убрать копирайт в письмах
-		this.add('Email_Footer', '</td> </tr> </table> </div> </td> </tr> </table><!-- /BODY --> </td> </tr> <tr style="margin: 0; padding: 0;"> <td style="margin: 0; padding: 0;"> <!-- FOOTER --> <table class="wrap"> <tr> <td class="container"> <!-- content --> <div class="content"> <table width="100%"> <tr> <td align="center" class="social"></td> </tr> <tr> <td align="center"> <h6>Slonbook</h6> </td> </tr> </table> </div><!-- /content --> </td> </tr> </table><!-- /FOOTER --> </td> </tr> </table> </body> </html>', {
+		this.add('Email_Footer', '</td> </tr> </table> </div> </td> </tr> </table><!-- /BODY --> </td> </tr> <tr style="margin: 0; padding: 0;"> <td style="margin: 0; padding: 0;"> <!-- FOOTER --> <table class="wrap"> <tr> <td class="container"> <!-- content --> <div class="content"> <table width="100%"> <tr> <td align="center" class="social"></td> </tr> <tr> <td align="center"> <h6>© Slonbook</h6> </td> </tr> </table> </div><!-- /content --> </td> </tr> </table><!-- /FOOTER --> </td> </tr> </table> </body> </html>', {
 			type: 'code',
 			code: 'text/html',
 			multiline: true,
