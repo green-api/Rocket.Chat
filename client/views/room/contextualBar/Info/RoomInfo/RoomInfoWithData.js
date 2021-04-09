@@ -191,7 +191,9 @@ const RoomInfoWithData = ({ rid, openEditing, onClickBack, onEnterRoom, resetSta
 			onClickDelete={canDelete && handleDelete}
 			onClickLeave={canLeave && handleLeave}
 			onClickHide={joined && handleHide}
-			onClickMoveToTeam={!room.teamId && onMoveToTeam}
+			// SLONBOOK START SF-43
+			onClickMoveToTeam={!room.teamId && canConvertRoomToTeam && onMoveToTeam}
+			// SLONBOOK END
 			onClickConvertToTeam={!room.teamId && canConvertRoomToTeam && onConvertToTeam}
 			onClickEnterRoom={onEnterRoom && onClickEnterRoom}
 			{...room}
