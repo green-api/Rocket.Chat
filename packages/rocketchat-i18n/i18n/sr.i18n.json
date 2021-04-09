@@ -238,7 +238,7 @@
   "Auto_Translate": "Аутоматски преведи",
   "auto-translate": "Аутоматско превођење",
   "auto-translate_description": "Дозвола за коришћење алата за аутоматско превођење",
-  "AutoLinker_StripPrefix_Description": "Кратак приказ. нпр https://rocket.chat => rocket.chat",
+  "AutoLinker_StripPrefix_Description": "Кратак приказ. нпр https://SLONBOOK => SLONBOOK",
   "Automatic_Translation": "Аутоматско превођење",
   "AutoTranslate": "Аутоматски преведи",
   "AutoTranslate_APIKey": "АПИ кључ",
