@@ -65,6 +65,17 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 		});
 	});
 
+	// START SLONBOOK SF-44
+	if (!tab) {
+		router.push({
+			...params,
+			tab: "channel-settings",
+			context,
+		});
+	
+	}
+	// END SLONBOOK
+
 	const open = useMutableCallback((actionId, context) => {
 		if (actionId === activeTabBar[0]?.id && context === undefined) {
 			return close();
@@ -141,7 +152,10 @@ export const useTabContext = (): ToolboxActionConfig | undefined =>
 export const useTab = (): ToolboxActionConfig | undefined =>
 	useContext(ToolboxContext).activeTabBar;
 export const useTabBarOpen = (): Function => useContext(ToolboxContext).open;
-export const useTabBarClose = (): Function => useContext(ToolboxContext).close;
+
+export const useTabBarClose = (): Function => {
+	return useContext(ToolboxContext).close;
+}
 export const useTabBarOpenUserInfo = (): Function => useContext(ToolboxContext).openUserInfo;
 
 export default ToolboxProvider;
