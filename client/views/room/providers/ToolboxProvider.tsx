@@ -69,11 +69,10 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 	if (!tab) {
 		router.push({
 			...params,
-			tab: "channel-settings",
+			tab: 'channel-settings',
 			context,
 		});
-	
-	}
+	};
 	// END SLONBOOK
 
 	const open = useMutableCallback((actionId, context) => {
@@ -153,9 +152,8 @@ export const useTab = (): ToolboxActionConfig | undefined =>
 	useContext(ToolboxContext).activeTabBar;
 export const useTabBarOpen = (): Function => useContext(ToolboxContext).open;
 
-export const useTabBarClose = (): Function => {
-	return useContext(ToolboxContext).close;
-}
+export const useTabBarClose = (): Function => useContext(ToolboxContext).close;
+
 export const useTabBarOpenUserInfo = (): Function => useContext(ToolboxContext).openUserInfo;
 
 export default ToolboxProvider;
