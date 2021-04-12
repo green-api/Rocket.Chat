@@ -72,7 +72,7 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 			tab: 'channel-settings',
 			context,
 		});
-	};
+	}
 	// END SLONBOOK
 
 	const open = useMutableCallback((actionId, context) => {
