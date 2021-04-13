@@ -70,7 +70,7 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 		router.push({
 			...params,
 			tab: 'channel-settings',
-			context,
+			context: context as string,
 		});
 	}
 	// END SLONBOOK
