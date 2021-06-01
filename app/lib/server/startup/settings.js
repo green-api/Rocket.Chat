@@ -203,7 +203,7 @@ settings.addGroup('Accounts', function() {
 			],
 		});
 
-		this.add('Accounts_RegistrationForm_LinkReplacementText', 'New user registration is currently disabled', {
+		this.add('Accounts_RegistrationForm_LinkReplacementText', '', {
 			type: 'string',
 			public: true,
 		});

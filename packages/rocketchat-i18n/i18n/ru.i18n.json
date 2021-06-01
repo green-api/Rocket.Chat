@@ -205,7 +205,7 @@
   "Accounts_Registration_InviteUrlType_Proxy": "Прокси",
   "Accounts_RegistrationForm": "Регистрационная форма",
   "Accounts_RegistrationForm_Disabled": "Отключена",
-  "Accounts_RegistrationForm_LinkReplacementText": "Текст замены ссылки регистрационной формы",
+  "Accounts_RegistrationForm_LinkReplacementText": "",
   "Accounts_RegistrationForm_Public": "Открытая",
   "Accounts_RegistrationForm_Secret_URL": "Секретный URL-адрес",
   "Accounts_RegistrationForm_SecretURL": "Секретный URL-адрес регистрационной формы",
