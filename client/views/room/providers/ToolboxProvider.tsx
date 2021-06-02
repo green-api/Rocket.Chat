@@ -63,7 +63,7 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 			tab: '',
 			context: '',
 		});
-	})
+	});
 
 	const open = useMutableCallback((actionId, context) => {
 		if (actionId === activeTabBar[0]?.id && context === undefined) {
