@@ -63,17 +63,7 @@ const ToolboxProvider = ({ children, room }: { children: ReactNode; room: IRoom 
 			tab: '',
 			context: '',
 		});
-	});
-
-	// START SLONBOOK SF-44
-	if (!tab) {
-		router.push({
-			...params,
-			tab: 'channel-settings',
-			context: context as string,
-		});
-	}
-	// END SLONBOOK
+	})
 
 	const open = useMutableCallback((actionId, context) => {
 		if (actionId === activeTabBar[0]?.id && context === undefined) {
